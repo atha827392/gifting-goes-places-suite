@@ -29,9 +29,9 @@ const ContactSection = () => {
     
     try {
       // Replace these with your actual EmailJS credentials
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      const serviceId = 'service_bp033a7';
+      const templateId = 'template_i10z3wl'
+      const publicKey = '0X1x8MOrd2vnvfJks';
       
       const templateParams = {
         from_name: formData.name,
