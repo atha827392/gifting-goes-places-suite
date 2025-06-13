@@ -38,7 +38,7 @@ const ContactSection = () => {
         from_email: formData.email,
         company: formData.company,
         message: formData.message,
-        to_email: 'corporate@bagquest.com'
+        to_email: 'corporate@elenor.com'
       };
       
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
@@ -160,8 +160,8 @@ const ContactSection = () => {
               <div className="space-y-6">
                 <div>
                   <h4 className="text-lg font-medium text-charcoal mb-2">Business Email</h4>
-                  <a href="mailto:corporate@bagquest.com" className="text-navy hover:underline">
-                    corporate@bagquest.com
+                  <a href="mailto:corporate@elenor.com" className="text-navy hover:underline">
+                    corporate@elenor.com
                   </a>
                 </div>
                 

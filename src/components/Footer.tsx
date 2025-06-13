@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer = () => {
@@ -9,7 +8,7 @@ const Footer = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">BagQuest</h3>
+            <h3 className="text-xl font-semibold mb-4">Elenor</h3>
             <p className="text-white/80 mb-4">
               Elevating corporate gifting with premium bags that make an impression.
             </p>
@@ -56,7 +55,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/20 pt-6 text-center text-white/60 text-sm">
-          <p>&copy; {currentYear} BagQuest. All rights reserved.</p>
+          <p>&copy; {currentYear} Elenor. All rights reserved.</p>
         </div>
       </div>
     </footer>

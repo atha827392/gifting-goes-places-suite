@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex justify-between items-center">
           <a href="/" className="text-charcoal font-semibold text-xl md:text-2xl tracking-tight">
-            BagQuest
+            Elenor
           </a>
           
           {/* Desktop Navigation */}
