@@ -23,7 +23,7 @@ const RetailSection = () => {
   ];
 
   return (
-    <section id="retail" className="section-luxury texture-suede">
+    <section id="retail" className="section-luxury bg-white">
       <div className="container-luxury">
         <div className="text-center mb-16">
           <h2 className="font-display text-5xl md:text-6xl text-dark-chocolate mb-6">
