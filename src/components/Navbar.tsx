@@ -23,7 +23,7 @@ const Navbar = () => {
     }`}>
       <div className="container-custom">
         <div className="flex justify-between items-center">
-          <a href="/" className="flex items-center space-x-3 hover-lift group">
+          <a href="/" className="flex items-center hover-lift group">
             <div className="relative">
               <h1 className="text-3xl md:text-4xl font-elegant font-bold text-gradient group-hover:scale-110 transition-all duration-500">
                 Elenor
