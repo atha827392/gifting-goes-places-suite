@@ -63,14 +63,17 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Corporate color palette
+				// Corporate color palette inspired by the logo
 				charcoal: '#403E43',
 				navy: '#2D3D4F',
 				taupe: '#B8A99A',
 				beige: '#F1EFEB',
+				cream: '#F8F6F0',
+				sage: '#A8A5A0',
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
+				elegant: ['Playfair Display', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -113,13 +116,24 @@ export default {
 						opacity: '1',
 						transform: 'translateX(0)'
 					}
+				},
+				'elegant-fade': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px) scale(0.95)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0) scale(1)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
-				'slide-in': 'slide-in 0.5s ease-out'
+				'slide-in': 'slide-in 0.5s ease-out',
+				'elegant-fade': 'elegant-fade 0.6s ease-out'
 			}
 		}
 	},
