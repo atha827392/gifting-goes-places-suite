@@ -2,7 +2,6 @@
 import React from 'react';
 
 const ClientsSection = () => {
-  // Placeholder client logos (would be replaced with actual client logos in production)
   const clients = [
     { id: 1, name: 'Tech Solutions Inc.', logo: 'TS' },
     { id: 2, name: 'Global Travels', logo: 'GT' },
@@ -12,21 +11,27 @@ const ClientsSection = () => {
   ];
   
   return (
-    <section className="section-padding bg-white">
-      <div className="container-custom">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
+    <section className="section-padding bg-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 rounded-full bg-taupe blur-3xl"></div>
+        <div className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full bg-sage blur-3xl"></div>
+      </div>
+      
+      <div className="container-custom relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-elegant font-bold text-gradient mb-6">
             Trusted by Industry Leaders
           </h2>
-          <p className="text-charcoal/70 max-w-2xl mx-auto">
-            Partnering with forward-thinking companies across industries to elevate their corporate gifting experience.
+          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
+            Partnering with visionary companies across industries to transform their corporate gifting experience.
           </p>
         </div>
         
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-          {clients.map((client) => (
-            <div key={client.id} className="group flex items-center justify-center">
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-beige flex items-center justify-center text-2xl font-bold text-charcoal border border-gray-200 transition-all group-hover:bg-navy group-hover:text-white">
+        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+          {clients.map((client, index) => (
+            <div key={client.id} className="group flex items-center justify-center animate-fade-in" style={{animationDelay: `${index * 200}ms`}}>
+              <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-beige to-cream flex items-center justify-center text-2xl md:text-3xl font-elegant font-bold text-charcoal border-4 border-white shadow-lg hover-lift group-hover:shadow-2xl transition-all duration-500 group-hover:bg-luxury-gradient group-hover:text-white">
                 {client.logo}
               </div>
             </div>
