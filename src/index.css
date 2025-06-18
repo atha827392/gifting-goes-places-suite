@@ -61,18 +61,48 @@
   --dark-chocolate: #3C2414;
   --soft-gray: #F8F6F0;
   --pearl: #F0EDE5;
+  
+  /* Premium Brand Colors */
+  --deep-burgundy: #722F37;
+  --rose-gold: #E8B4A0;
+  --champagne-gold: #F7E7A3;
+  --ivory: #FFFFF0;
+  --platinum: #E5E4E2;
 }
 
-/* Premium Typography */
+/* Premium Typography with Wow Factor */
 .elenor-brand {
   font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  background: linear-gradient(135deg, #6B5B73 0%, #4A4A4A 50%, #2D2D2D 100%);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, 
+    #722F37 0%, 
+    #E8B4A0 25%, 
+    #D4AF37 50%, 
+    #722F37 75%, 
+    #8B4513 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative;
+  text-shadow: 0 0 30px rgba(114, 47, 55, 0.3);
+}
+
+.elenor-brand::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(circle at center, rgba(114, 47, 55, 0.1) 0%, transparent 70%);
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.elenor-brand:hover {
+  transform: scale(1.02);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .luxury-text {
@@ -81,93 +111,123 @@
   color: var(--dark-chocolate);
 }
 
-/* 3D Effects and Shadows */
+/* Enhanced 3D Effects and Shadows */
 .shadow-luxury {
   box-shadow: 
-    0 4px 20px rgba(212, 175, 55, 0.15),
-    0 8px 40px rgba(139, 69, 19, 0.1),
-    0 16px 60px rgba(60, 36, 20, 0.05);
+    0 8px 32px rgba(114, 47, 55, 0.15),
+    0 16px 64px rgba(212, 175, 55, 0.1),
+    0 24px 80px rgba(139, 69, 19, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .shadow-soft {
   box-shadow: 
-    0 2px 10px rgba(212, 175, 55, 0.1),
-    0 4px 20px rgba(139, 69, 19, 0.05);
+    0 4px 20px rgba(114, 47, 55, 0.1),
+    0 8px 40px rgba(212, 175, 55, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.glow-gold {
+.glow-premium {
   box-shadow: 
-    0 0 20px rgba(212, 175, 55, 0.3),
-    0 0 40px rgba(212, 175, 55, 0.2),
-    0 0 60px rgba(212, 175, 55, 0.1);
+    0 0 30px rgba(114, 47, 55, 0.4),
+    0 0 60px rgba(232, 180, 160, 0.3),
+    0 0 90px rgba(212, 175, 55, 0.2);
 }
 
-/* 3D Transforms */
+/* 3D Transforms with Wow Factor */
 .transform-3d {
   transform-style: preserve-3d;
-  perspective: 1000px;
+  perspective: 1200px;
 }
 
 .rotate-3d:hover {
-  transform: rotateX(10deg) rotateY(-10deg) scale(1.05);
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotateX(15deg) rotateY(-15deg) scale(1.08);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Luxury Animations */
+/* Premium Animations */
 @keyframes float-luxury {
   0%, 100% { 
-    transform: translateY(0px) rotateX(0deg); 
+    transform: translateY(0px) rotateX(0deg) rotateZ(0deg); 
   }
-  50% { 
-    transform: translateY(-10px) rotateX(5deg); 
+  33% { 
+    transform: translateY(-15px) rotateX(5deg) rotateZ(1deg); 
+  }
+  66% { 
+    transform: translateY(-8px) rotateX(-3deg) rotateZ(-1deg); 
   }
 }
 
-@keyframes shimmer {
+@keyframes shimmer-premium {
   0% { 
-    background-position: -200px 0; 
+    background-position: -300px 0; 
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
   100% { 
-    background-position: 200px 0; 
+    background-position: 300px 0; 
+    opacity: 0;
   }
 }
 
-@keyframes pulse-gold {
+@keyframes pulse-premium {
   0%, 100% { 
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 30px rgba(114, 47, 55, 0.3);
+    transform: scale(1);
   }
   50% { 
-    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 60px rgba(114, 47, 55, 0.6);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes brand-glow {
+  0%, 100% {
+    text-shadow: 0 0 30px rgba(114, 47, 55, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 50px rgba(114, 47, 55, 0.6),
+                 0 0 80px rgba(232, 180, 160, 0.4);
   }
 }
 
 .animate-float-luxury {
-  animation: float-luxury 6s ease-in-out infinite;
+  animation: float-luxury 8s ease-in-out infinite;
 }
 
-.animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
-  background-size: 200px 100%;
-  animation: shimmer 3s infinite;
+.animate-shimmer-premium {
+  background: linear-gradient(90deg, transparent, rgba(114, 47, 55, 0.3), rgba(232, 180, 160, 0.2), transparent);
+  background-size: 300px 100%;
+  animation: shimmer-premium 4s infinite;
 }
 
-.animate-pulse-gold {
-  animation: pulse-gold 3s ease-in-out infinite;
+.animate-pulse-premium {
+  animation: pulse-premium 4s ease-in-out infinite;
 }
 
-/* Luxury Buttons */
+.animate-brand-glow {
+  animation: brand-glow 6s ease-in-out infinite;
+}
+
+/* Premium Buttons with Wow Factor */
 .btn-luxury {
-  background: linear-gradient(135deg, var(--gold) 0%, var(--rich-gold) 100%);
+  background: linear-gradient(135deg, 
+    var(--deep-burgundy) 0%, 
+    var(--rose-gold) 50%, 
+    var(--deep-burgundy) 100%);
   color: white;
-  padding: 16px 32px;
-  border-radius: 8px;
+  padding: 18px 36px;
+  border-radius: 12px;
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 500;
-  font-size: 1.1rem;
-  letter-spacing: 0.025em;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-luxury::before {
@@ -177,8 +237,8 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.6s;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.8s;
 }
 
 .btn-luxury:hover::before {
@@ -186,10 +246,10 @@
 }
 
 .btn-luxury:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px) scale(1.05);
   box-shadow: 
-    0 8px 25px rgba(212, 175, 55, 0.4),
-    0 16px 50px rgba(139, 69, 19, 0.2);
+    0 12px 40px rgba(114, 47, 55, 0.4),
+    0 24px 80px rgba(232, 180, 160, 0.2);
 }
 
 /* Responsive Utilities */
@@ -205,17 +265,18 @@
   }
 }
 
-/* Navigation Styles */
+/* Enhanced Navigation Styles */
 .nav-luxury {
-  backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.9);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(114, 47, 55, 0.1);
+  box-shadow: 0 4px 20px rgba(114, 47, 55, 0.05);
 }
 
 .nav-link {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
-  color: var(--dark-chocolate);
+  color: var(--deep-burgundy);
   transition: all 0.3s ease;
   position: relative;
 }
@@ -223,16 +284,18 @@
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: -6px;
   left: 0;
   width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--gold), var(--bronze));
-  transition: width 0.3s ease;
+  height: 3px;
+  background: linear-gradient(90deg, var(--deep-burgundy), var(--rose-gold));
+  transition: width 0.4s ease;
+  border-radius: 2px;
 }
 
 .nav-link:hover {
-  color: var(--gold);
+  color: var(--rose-gold);
+  transform: translateY(-2px);
 }
 
 .nav-link:hover::after {
@@ -241,11 +304,26 @@
 
 /* Section Spacing */
 .section-luxury {
-  padding: 6rem 0;
+  padding: 8rem 0;
 }
 
 @media (max-width: 768px) {
   .section-luxury {
-    padding: 4rem 0;
+    padding: 5rem 0;
   }
 }
+
+/* Wow Factor Elements */
+.magical-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(1px);
+  opacity: 0.7;
+  animation: float-luxury 10s ease-in-out infinite;
+}
+
+.parallax-element {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+

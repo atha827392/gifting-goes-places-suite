@@ -53,7 +53,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Luxury color palette
+				// Enhanced luxury color palette
 				cream: '#FBF8F3',
 				'warm-cream': '#F5F1E8',
 				champagne: '#F7E7CE',
@@ -64,6 +64,12 @@ export default {
 				'dark-chocolate': '#3C2414',
 				'soft-gray': '#F8F6F0',
 				pearl: '#F0EDE5',
+				// Premium brand colors
+				'deep-burgundy': '#722F37',
+				'rose-gold': '#E8B4A0',
+				'champagne-gold': '#F7E7A3',
+				'ivory': '#FFFFF0',
+				'platinum': '#E5E4E2',
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
@@ -85,31 +91,54 @@ export default {
 					to: { height: '0' }
 				},
 				'fade-in': {
-					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'0%': { opacity: '0', transform: 'translateY(30px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
 				'slide-up': {
-					'0%': { opacity: '0', transform: 'translateY(40px)' },
+					'0%': { opacity: '0', transform: 'translateY(60px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
 				'float-luxury': {
-					'0%, 100%': { transform: 'translateY(0px) rotateX(0deg)' },
-					'50%': { transform: 'translateY(-10px) rotateX(5deg)' }
+					'0%, 100%': { transform: 'translateY(0px) rotateX(0deg) rotateZ(0deg)' },
+					'33%': { transform: 'translateY(-15px) rotateX(5deg) rotateZ(1deg)' },
+					'66%': { transform: 'translateY(-8px) rotateX(-3deg) rotateZ(-1deg)' }
 				},
-				'shimmer': {
-					'0%': { backgroundPosition: '-200px 0' },
-					'100%': { backgroundPosition: '200px 0' }
+				'shimmer-premium': {
+					'0%': { backgroundPosition: '-300px 0', opacity: '0' },
+					'50%': { opacity: '1' },
+					'100%': { backgroundPosition: '300px 0', opacity: '0' }
+				},
+				'pulse-premium': {
+					'0%, 100%': { 
+						boxShadow: '0 0 30px rgba(114, 47, 55, 0.3)',
+						transform: 'scale(1)'
+					},
+					'50%': { 
+						boxShadow: '0 0 60px rgba(114, 47, 55, 0.6)',
+						transform: 'scale(1.02)'
+					}
+				},
+				'brand-glow': {
+					'0%, 100%': {
+						textShadow: '0 0 30px rgba(114, 47, 55, 0.3)'
+					},
+					'50%': {
+						textShadow: '0 0 50px rgba(114, 47, 55, 0.6), 0 0 80px rgba(232, 180, 160, 0.4)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-up': 'slide-up 0.8s ease-out',
-				'float-luxury': 'float-luxury 6s ease-in-out infinite',
-				'shimmer': 'shimmer 3s infinite'
+				'fade-in': 'fade-in 0.8s ease-out',
+				'slide-up': 'slide-up 1s ease-out',
+				'float-luxury': 'float-luxury 8s ease-in-out infinite',
+				'shimmer-premium': 'shimmer-premium 4s infinite',
+				'pulse-premium': 'pulse-premium 4s ease-in-out infinite',
+				'brand-glow': 'brand-glow 6s ease-in-out infinite'
 			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
