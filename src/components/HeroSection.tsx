@@ -13,14 +13,6 @@ const HeroSection = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent rotate-45"></div>
       </div>
       
-      {/* Premium badge moved to top-right corner */}
-      <div className="absolute top-8 right-8 z-20 animate-fade-slide">
-        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 shadow-lg hover:scale-105 transition-all duration-500 group">
-          <Sparkles className="text-taupe h-4 w-4 group-hover:rotate-180 transition-transform duration-700" />
-          <span className="text-taupe font-medium tracking-wider text-sm">PREMIUM CORPORATE GIFTS</span>
-        </div>
-      </div>
-      
       <div className="container-custom relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           <div className="lg:w-1/2 space-y-8 animate-elegant-fade">
@@ -36,6 +28,11 @@ const HeroSection = () => {
                 <span className="block text-charcoal">Elegance That</span>
                 <span className="block text-gold-gradient shine-text">Travels.</span>
               </h2>
+              
+              <div className="flex items-center gap-4 mb-8 group">
+                <Sparkles className="text-taupe h-8 w-8 group-hover:rotate-180 transition-transform duration-700" />
+                <span className="text-taupe font-medium tracking-widest text-lg animate-fade-slide">PREMIUM CORPORATE GIFTS</span>
+              </div>
               
               <p className="text-2xl md:text-3xl text-charcoal/80 max-w-2xl leading-relaxed animate-fade-slide" style={{animationDelay: '0.3s'}}>
                 Curated handbags that create unforgettable impressions for your team, clients, and partners.
