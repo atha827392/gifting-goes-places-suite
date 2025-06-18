@@ -1,64 +1,61 @@
 
 import React from 'react';
-import { Package, PenTool, Truck, Leaf } from 'lucide-react';
-
-interface Service {
-  id: number;
-  title: string;
-  description: string;
-  icon: React.ElementType;
-}
+import { Leaf, Palette, Globe, Shield } from 'lucide-react';
 
 const ServicesSection = () => {
-  const services: Service[] = [
+  const services = [
     {
-      id: 1,
-      title: "Bulk Corporate Gifting",
-      description: "Streamlined ordering for large quantities with special pricing and dedicated account management.",
-      icon: Package
+      icon: Leaf,
+      title: "Eco-Conscious Materials",
+      description: "Premium vegan leather made from sustainable plant-based materials that look and feel luxurious while respecting our planet."
     },
     {
-      id: 2,
-      title: "Custom Branding",
-      description: "Add your company logo, colors, and personalized touches to create uniquely branded gifts.",
-      icon: PenTool
+      icon: Palette,
+      title: "Custom Design Services",
+      description: "Work with our design team to create bespoke pieces that reflect your brand's unique identity and values."
     },
     {
-      id: 3,
-      title: "Pan-India Delivery",
-      description: "Fast, reliable delivery to any location across India with real-time tracking capabilities.",
-      icon: Truck
+      icon: Globe,
+      title: "Global Shipping",
+      description: "Worldwide delivery with eco-friendly packaging. Carbon-neutral shipping options available for conscious consumers."
     },
     {
-      id: 4,
-      title: "Eco-conscious Options",
-      description: "Sustainable materials and eco-friendly manufacturing processes for environmentally responsible gifting.",
-      icon: Leaf
+      icon: Shield,
+      title: "Lifetime Craftsmanship Guarantee",
+      description: "We stand behind our quality. Every Elenor piece comes with our commitment to exceptional craftsmanship."
     }
   ];
 
   return (
-    <section id="services" className="section-padding bg-white">
-      <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-            Our Services
+    <section id="services" className="section-luxury bg-gradient-to-br from-pearl to-soft-gray">
+      <div className="container-luxury">
+        <div className="text-center mb-20">
+          <h2 className="font-display text-6xl md:text-7xl text-dark-chocolate mb-8">
+            Our 
+            <span className="block bg-gradient-to-r from-gold to-bronze bg-clip-text text-transparent">
+              Promise
+            </span>
           </h2>
-          <p className="text-charcoal/70 max-w-2xl mx-auto">
-            Comprehensive solutions to elevate your corporate gifting experience.
+          <p className="luxury-text text-2xl max-w-4xl mx-auto leading-relaxed opacity-90">
+            Beyond beautiful handbags, we offer a complete luxury experience built on ethical practices, superior service, and unwavering quality.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service) => {
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <div key={service.id} className="p-6 bg-beige rounded-lg hover:bg-beige/90 transition-colors animate-fade-in">
-                <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-white text-navy">
-                  <IconComponent size={24} />
+              <div 
+                key={index} 
+                className="text-center group animate-fade-in"
+                style={{animationDelay: `${index * 0.2}s`}}
+              >
+                <div className="bg-gradient-to-br from-gold to-bronze p-8 rounded-3xl shadow-luxury group-hover:glow-gold transition-all duration-500 w-fit mx-auto mb-8">
+                  <IconComponent className="text-white" size={40} />
                 </div>
-                <h3 className="text-xl font-semibold text-charcoal mb-3">{service.title}</h3>
-                <p className="text-charcoal/70">{service.description}</p>
+                
+                <h3 className="font-serif text-2xl text-dark-chocolate mb-6">{service.title}</h3>
+                <p className="luxury-text leading-relaxed opacity-90">{service.description}</p>
               </div>
             );
           })}
