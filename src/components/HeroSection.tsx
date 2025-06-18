@@ -18,8 +18,8 @@ const HeroSection = () => {
           <div className="lg:w-1/2 space-y-8 animate-elegant-fade">
             <div className="space-y-8">
               <div className="relative">
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-elegant font-bold leading-tight">
-                  <span className="block text-charcoal hover:scale-105 transition-transform duration-700 cursor-default">Elenor</span>
+                <h1 className="elenor-logo-large leading-tight hover:scale-105 transition-transform duration-700 cursor-default">
+                  Elenor
                 </h1>
                 <div className="absolute inset-0 bg-gradient-to-r from-taupe/10 to-sage/10 blur-2xl opacity-0 hover:opacity-100 transition-opacity duration-700"></div>
               </div>

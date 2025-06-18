@@ -16,11 +16,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div className="space-y-6">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="/lovable-uploads/b71c7861-89b9-440f-b7ac-22bd54c86e8e.png" 
-                alt="Elenor Logo" 
-                className="h-12 w-auto filter brightness-0 invert drop-shadow-lg"
-              />
+              <h3 className="elenor-logo-small text-white">Elenor</h3>
             </div>
             <p className="text-white/90 mb-8 text-lg leading-relaxed">
               Elevating corporate gifting with premium bags that create lasting impressions and meaningful connections.

@@ -23,9 +23,9 @@ const Navbar = () => {
     }`}>
       <div className="container-custom">
         <div className="flex justify-between items-center">
-          <a href="/" className="flex items-center hover-lift group">
+          <a href="/" className="hover-lift group">
             <div className="relative">
-              <h1 className="text-3xl md:text-4xl font-elegant font-bold text-gradient group-hover:scale-110 transition-all duration-500">
+              <h1 className="elenor-logo-medium group-hover:scale-110 transition-all duration-500">
                 Elenor
               </h1>
               <div className="absolute inset-0 bg-gradient-to-r from-taupe/20 to-sage/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
