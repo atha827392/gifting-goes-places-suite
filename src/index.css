@@ -36,8 +36,8 @@
   }
 
   body {
-    @apply bg-cream text-foreground font-sans antialiased;
-    background: linear-gradient(135deg, #FBF8F3 0%, #F5F1E8 100%);
+    @apply bg-white text-foreground font-sans antialiased;
+    background: white;
   }
   
   .font-serif {
@@ -68,7 +68,7 @@
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   letter-spacing: 0.02em;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--rich-gold) 50%, var(--bronze) 100%);
+  background: linear-gradient(135deg, #6B5B73 0%, #4A4A4A 50%, #2D2D2D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -228,7 +228,7 @@
 /* Navigation Styles */
 .nav-luxury {
   backdrop-filter: blur(20px);
-  background: rgba(251, 248, 243, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
